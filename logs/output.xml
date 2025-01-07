@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.13.1 on win32)" generated="2024-12-22T22:59:30.154762" rpa="false" schemaversion="5">
+<suite id="s1" name="CT06 clique simples toast" source="C:\projetos\yodapp-robot\tests\CT06_clique_simples_toast.robot">
+<test id="s1-t1" name="CT06 - Verificar aparecimento do toast após clicar no botão &quot;CLIQUE SIMPLES&quot;" line="6">
+<kw name="Abrir aplicativo" owner="base">
+<kw name="Open Application" owner="AppiumLibrary">
+<arg>http://localhost:4723</arg>
+<arg>platformName=Android</arg>
+<arg>deviceName=Android Emulator</arg>
+<arg>automationName=UIAutomator2</arg>
+<arg>app=${EXECDIR}/app/yodapp-beta.apk</arg>
+<arg>udid=emulator-5554</arg>
+<arg>autoGrantPermissions=true</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://appium.io/docs/en/2.1/cli/args/
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" start="2024-12-22T22:59:30.398948" elapsed="20.878751"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="AppiumLibrary">
+<arg>Yodapp</arg>
+<arg>10</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" start="2024-12-22T22:59:51.277943" elapsed="5.282708"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="AppiumLibrary">
+<arg>Mobile Training</arg>
+<arg>10</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" start="2024-12-22T22:59:56.560795" elapsed="0.017433"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="AppiumLibrary">
+<arg>by Papito</arg>
+<arg>10</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" start="2024-12-22T22:59:56.578442" elapsed="0.017587"/>
+</kw>
+<status status="PASS" start="2024-12-22T22:59:30.397943" elapsed="26.198169"/>
+</kw>
+<kw name="Clicar no botão" owner="base">
+<kw name="Click Text" owner="AppiumLibrary">
+<msg time="2024-12-22T22:59:57.077301" level="INFO">xpath criteria: //*[contains(@text,"QAX")]</msg>
+<arg>${item_text}</arg>
+<doc>Click text identified by ``text``.</doc>
+<status status="PASS" start="2024-12-22T22:59:56.596457" elapsed="0.480907"/>
+</kw>
+<arg>QAX</arg>
+<status status="PASS" start="2024-12-22T22:59:56.596254" elapsed="0.481173"/>
+</kw>
+<kw name="Deve exibir o título" owner="base">
+<kw name="Wait Until Page Contains" owner="AppiumLibrary">
+<arg>${title}</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" start="2024-12-22T22:59:57.077954" elapsed="1.125793"/>
+</kw>
+<arg>Clique em Botões</arg>
+<status status="PASS" start="2024-12-22T22:59:57.077565" elapsed="1.126256"/>
+</kw>
+<kw name="Navegar até o menu hamburguer" owner="base">
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-12-22T22:59:58.204719" level="INFO">Clicking element 'xpath=//android.widget.ImageButton[@content-desc="Open navigation drawer"]'.</msg>
+<msg time="2024-12-22T22:59:58.344580" level="INFO">xpath criteria: //android.widget.ImageButton[@content-desc="Open navigation drawer"]</msg>
+<arg>${MENU}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-12-22T22:59:58.204127" elapsed="0.140530"/>
+</kw>
+<status status="PASS" start="2024-12-22T22:59:58.203947" elapsed="0.140823"/>
+</kw>
+<kw name="Clicar no item" owner="base">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-12-22T22:59:58.345735" level="INFO">${option} = xpath=//*[@resource-id="com.qaxperience.yodapp:id/navView"]//*[@text="Clique em Botões"]</msg>
+<var>${option}</var>
+<arg>xpath=//*[@resource-id="com.qaxperience.yodapp:id/navView"]//*[@text="${item_menu}"]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-12-22T22:59:58.345485" elapsed="0.000298"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-12-22T22:59:59.288259" level="INFO">xpath criteria: //android.widget.ImageButton[@content-desc="Open navigation drawer"]</msg>
+<arg>${MENU}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-12-22T22:59:58.345953" elapsed="0.942395"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-12-22T22:59:59.289694" level="INFO">Clicking element 'xpath=//*[@resource-id="com.qaxperience.yodapp:id/navView"]//*[@text="Clique em Botões"]'.</msg>
+<msg time="2024-12-22T23:00:00.397257" level="INFO">xpath criteria: //*[@resource-id="com.qaxperience.yodapp:id/navView"]//*[@text="Clique em Botões"]</msg>
+<arg>${option}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-12-22T22:59:59.288511" elapsed="1.108924"/>
+</kw>
+<arg>Clique em Botões</arg>
+<status status="PASS" start="2024-12-22T22:59:58.345042" elapsed="2.052598"/>
+</kw>
+<kw name="Deve exibir o título" owner="base">
+<kw name="Wait Until Page Contains" owner="AppiumLibrary">
+<arg>${title}</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" start="2024-12-22T23:00:00.398814" elapsed="0.105684"/>
+</kw>
+<arg>Clique em Botões</arg>
+<status status="PASS" start="2024-12-22T23:00:00.398093" elapsed="0.106519"/>
+</kw>
+<kw name="Clicar no botão" owner="base">
+<kw name="Click Text" owner="AppiumLibrary">
+<msg time="2024-12-22T23:00:02.347460" level="INFO">xpath criteria: //*[contains(@text,"Clique simples")]</msg>
+<arg>${item_text}</arg>
+<doc>Click text identified by ``text``.</doc>
+<status status="PASS" start="2024-12-22T23:00:00.505128" elapsed="1.842616"/>
+</kw>
+<arg>Clique simples</arg>
+<status status="PASS" start="2024-12-22T23:00:00.504804" elapsed="1.843119"/>
+</kw>
+<kw name="Deve exibir o título" owner="base">
+<kw name="Wait Until Page Contains" owner="AppiumLibrary">
+<arg>${title}</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" start="2024-12-22T23:00:02.348670" elapsed="0.036146"/>
+</kw>
+<arg>Botão clique simples</arg>
+<status status="PASS" start="2024-12-22T23:00:02.348194" elapsed="0.036749"/>
+</kw>
+<kw name="Clicar no botão" owner="base">
+<kw name="Click Text" owner="AppiumLibrary">
+<msg time="2024-12-22T23:00:02.992062" level="INFO">xpath criteria: //*[contains(@text,"CLIQUE SIMPLES")]</msg>
+<arg>${item_text}</arg>
+<doc>Click text identified by ``text``.</doc>
+<status status="PASS" start="2024-12-22T23:00:02.385486" elapsed="0.606685"/>
+</kw>
+<arg>CLIQUE SIMPLES</arg>
+<status status="PASS" start="2024-12-22T23:00:02.385152" elapsed="0.607134"/>
+</kw>
+<kw name="Deve exibir o toast" owner="base">
+<kw name="Wait Until Page Contains" owner="AppiumLibrary">
+<arg>${toast}</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" start="2024-12-22T23:00:02.992915" elapsed="0.040109"/>
+</kw>
+<arg>Isso é um clique simples</arg>
+<status status="PASS" start="2024-12-22T23:00:02.992535" elapsed="0.040560"/>
+</kw>
+<kw name="Fechar aplicativo" owner="base">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-22T23:00:07.033981" level="INFO">Slept 4 seconds.</msg>
+<arg>4</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-22T23:00:03.033392" elapsed="4.000795"/>
+</kw>
+<kw name="Close Application" owner="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" start="2024-12-22T23:00:07.034537" elapsed="1.590342"/>
+</kw>
+<status status="PASS" start="2024-12-22T23:00:03.033220" elapsed="5.591790"/>
+</kw>
+<doc>Este teste verifica a funcionalidade do toast após clicar no botão "CLIQUE SIMPLES"</doc>
+<status status="PASS" start="2024-12-22T22:59:30.396830" elapsed="38.228347"/>
+</test>
+<status status="PASS" start="2024-12-22T22:59:30.156495" elapsed="38.469260"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="CT06 clique simples toast">CT06 clique simples toast</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
